@@ -8,6 +8,9 @@ use App\Models\Type;
 use App\Models\User;
 use App\Models\Entry;
 use App\Models\Project;
+use App\Models\Topic;
+use App\Models\Skills;
+
 
 
 /*
@@ -38,7 +41,18 @@ Route::get('/entries', function(){
     return $entries;
 
 });
+Route::get('/topics', function(){
 
+    $topics = Topic::orderBy('title')->get();
+    return $topics;
+
+});
+Route::get('/skills', function(){
+
+    $skills = Skills::orderBy('title')->get();
+    return $skills;
+
+});
 Route::get('/projects', function(){
 
     $projects = Project::orderBy('created_at')->get();

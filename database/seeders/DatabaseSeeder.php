@@ -6,6 +6,7 @@ use App\Models\Entry;
 use App\Models\Topic;
 use App\Models\User;
 use App\Models\Type;
+use App\Models\Skill;
 use App\Models\Project;
 use Illuminate\Database\Seeder;
 
@@ -24,6 +25,7 @@ class DatabaseSeeder extends Seeder
         Project::truncate();
         Entry::truncate();
         Topic::truncate();
+        Skill::truncate();
         
         
         User::factory()->count(2)->create();
@@ -31,6 +33,7 @@ class DatabaseSeeder extends Seeder
         Topic::factory()->count(4)->create();
         Project::factory()->count(4)->create();
         Entry::factory()->count(4)->create();
+        Skill::factory()->count(3)->create();
             
     }
 }

@@ -10,6 +10,7 @@
         <li><a href="/console/users/list">Manage Users</a></li>
         <li><a href="/console/entries/list">Manage Journal Entries</a></li>
         <li><a href="/console/topics/list">Manage Topics</a></li>
+        <li><a href="/console/skills/list">Manage Skills</li>
         <li><a href="/console/logout">Log Out</a></li>
     </ul>
 
