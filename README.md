@@ -16,7 +16,7 @@ $ cd <FOLDER_NAME>
 $ ls
 ```
 
-Note: On a Wiindows machine use ```dir``` to view the files in the current folder:
+Note: On a Windows machine use ```dir``` to view the files in the current folder:
 
 ```
 $ dir
