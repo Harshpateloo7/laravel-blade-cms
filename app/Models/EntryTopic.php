@@ -9,5 +9,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class EntryTopic extends Model
 {
     use HasFactory;
-    
+    public function entries(): BelongsTo
+    {
+        return $this->belongsTo(Entry::class);
+    }
 }

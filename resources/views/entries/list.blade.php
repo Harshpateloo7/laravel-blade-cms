@@ -16,6 +16,11 @@
             <tr>
                 <td>{{$entry->title}}</td>
                 <td>{{\Carbon\Carbon::parse($entry->learned_at)->format('d/m/Y g:i A')}}</td>
+                <td>
+                    @foreach($entry->topics as $topic)
+                    <span>{{$topic->title}},</span>
+                    @endforeach
+                </td>
                 <td><a href="/console/entries/edit/{{$entry->id}}">Edit</a></td>
                 <td><a href="/console/entries/delete/{{$entry->id}}">Delete</a></td>
             </tr>

@@ -10,13 +10,21 @@
         <tr class="w3-red">
             <th>Title</th>
             <th>url</th>
+            <th>Image</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
         <?php foreach($skills as $skill): ?>
             <tr>
                 <td>{{$skill->title}}</td>
-                <td>{{$skill->url}}</td>        
+                <td>{{$skill->url}}</td> 
+                <td>
+                    @if ($skill->image)
+                        <img src="{{asset('storage/'.$skill->image)}}" width="200">
+                    @endif
+                </td>
+                <td><a href="/console/skills/image/{{$skill->id}}">Image</a></td>       
                 <td><a href="/console/skills/edit/{{$skill->id}}">Edit</a></td>
                 <td><a href="/console/skills/delete/{{$skill->id}}">Delete</a></td>
             </tr>

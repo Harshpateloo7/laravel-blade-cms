@@ -11,6 +11,9 @@
         <li><a href="/console/entries/list">Manage Journal Entries</a></li>
         <li><a href="/console/topics/list">Manage Topics</a></li>
         <li><a href="/console/skills/list">Manage Skills</li>
+        <li><a href="/console/certificates/list">Manage Certificates</li>
+        <li><a href="/console/qualifications/list">Manage Qualification</li>
+        <li><a href="/console/experiences/list">Manage Experience</li>
         <li><a href="/console/logout">Log Out</a></li>
     </ul>
 

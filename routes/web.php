@@ -8,6 +8,9 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\EntriesController;
 use App\Http\Controllers\TopicsController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\CertificatesController;
+use App\Http\Controllers\QualificationsController;
+use App\Http\Controllers\ExperiencesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -83,3 +86,27 @@ Route::post('/console/skills/edit/{skill:id}', [SkillsController::class, 'edit']
 Route::get('/console/skills/image/{skill:id}', [SkillsController::class, 'imageForm'])->where('skill', '[0-9]+')->middleware('auth');
 Route::post('/console/skills/image/{skill:id}', [SkillsController::class, 'image'])->where('skill', '[0-9]+')->middleware('auth');
 Route::get('/console/skills/delete/{skill:id}', [SkillsController::class, 'delete'])->where('skill', '[0-9]+')->middleware('auth');
+
+Route::get('/console/certificates/list', [CertificatesController::class, 'list'])->middleware('auth');
+Route::get('/console/certificates/add', [CertificatesController::class, 'addForm'])->middleware('auth');
+Route::post('/console/certificates/add', [CertificatesController::class, 'add'])->middleware('auth');
+Route::get('/console/certificates/edit/{certificate:id}', [CertificatesController::class, 'editForm'])->where('certificate', '[0-9]+')->middleware('auth');
+Route::post('/console/certificates/edit/{certificate:id}', [CertificatesController::class, 'edit'])->where('certificate', '[0-9]+')->middleware('auth');
+Route::get('/console/certificates/image/{certificate:id}', [CertificatesController::class, 'imageForm'])->where('certificate', '[0-9]+')->middleware('auth');
+Route::post('/console/certificates/image/{certificate:id}', [CertificatesController::class, 'image'])->where('certificate', '[0-9]+')->middleware('auth');
+Route::get('/console/certificates/delete/{certificate:id}', [CertificatesController::class, 'delete'])->where('certificate', '[0-9]+')->middleware('auth');
+
+Route::get('/console/qualifications/list', [QualificationsController::class, 'list'])->middleware('auth');
+Route::get('/console/qualifications/add', [QualificationsController::class, 'addForm'])->middleware('auth');
+Route::post('/console/qualifications/add', [QualificationsController::class, 'add'])->middleware('auth');
+Route::get('/console/qualifications/edit/{qualification:id}', [QualificationsController::class, 'editForm'])->where('qualification', '[0-9]+')->middleware('auth');
+Route::post('/console/qualifications/edit/{qualification:id}', [QualificationsController::class, 'edit'])->where('qualification', '[0-9]+')->middleware('auth');
+Route::get('/console/qualifications/delete/{qualification:id}', [QualificationsController::class, 'delete'])->where('qualification', '[0-9]+')->middleware('auth');
+
+//EXPERIENCE
+Route::get('/console/experiences/list', [ExperiencesController::class, 'list'])->middleware('auth');
+Route::get('/console/experiences/add', [ExperiencesController::class, 'addForm'])->middleware('auth');
+Route::post('/console/experiences/add', [ExperiencesController::class, 'add'])->middleware('auth');
+Route::get('/console/experiences/edit/{experience:id}', [ExperiencesController::class, 'editForm'])->where('experience', '[0-9]+')->middleware('auth');
+Route::post('/console/experiences/edit/{experience:id}', [ExperiencesController::class, 'edit'])->where('experience', '[0-9]+')->middleware('auth');
+Route::get('/console/experiences/delete/{experience:id}', [ExperiencesController::class, 'delete'])->where('experience', '[0-9]+')->middleware('auth');

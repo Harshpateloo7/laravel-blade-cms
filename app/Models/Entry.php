@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Entry extends Model
 {
     use HasFactory;
-    public function entryTopics(): HasMany
+    public function topics()
     {
         return $this->belongsToMany(Topic::class);
     }

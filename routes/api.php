@@ -10,6 +10,9 @@ use App\Models\Entry;
 use App\Models\Project;
 use App\Models\Topic;
 use App\Models\Skills;
+use App\Models\Certificate;
+use App\Models\Qualification;
+use App\Models\Experience;
 
 
 
@@ -53,6 +56,25 @@ Route::get('/skills', function(){
     return $skills;
 
 });
+Route::get('/certificates', function(){
+
+    $certificates = Certificate::orderBy('title')->get();
+    return $certificates;
+
+});
+Route::get('/qualifications', function(){
+
+    $qualifications = Qualification::orderBy('college_name')->get();
+    return $qualifications;
+
+});
+Route::get('/experiences', function () {
+
+    $experiences = Experience::orderBy('start_date')->get();
+    return $experiences;
+
+});
+
 Route::get('/projects', function(){
 
     $projects = Project::orderBy('created_at')->get();
@@ -85,4 +107,3 @@ Route::get('/projects/profile/{project?}', function(Project $project){
     return $project;
 
 });
-
