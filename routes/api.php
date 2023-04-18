@@ -9,7 +9,7 @@ use App\Models\User;
 use App\Models\Entry;
 use App\Models\Project;
 use App\Models\Topic;
-use App\Models\Skills;
+use App\Models\Skill;
 use App\Models\Certificate;
 use App\Models\Qualification;
 use App\Models\Experience;
@@ -52,7 +52,7 @@ Route::get('/topics', function(){
 });
 Route::get('/skills', function(){
 
-    $skills = Skills::orderBy('title')->get();
+    $skills = Skill::orderBy('title')->get();
     return $skills;
 
 });
