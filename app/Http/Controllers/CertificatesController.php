@@ -6,6 +6,7 @@ use App\Models\Certificate;
 
 class CertificatesController extends Controller
 {
+    //list
     public function list()
     {
         return view('certificates.list', [
@@ -36,7 +37,7 @@ class CertificatesController extends Controller
          return redirect('/console/certificates/list')
              ->with('message', 'Certificate has been added!');
      }
-
+     //edit
      public function editForm(Certificate $certificate)
      {
          return view('certificates.edit', [
@@ -61,7 +62,7 @@ class CertificatesController extends Controller
         return redirect('/console/certificates/list')
             ->with('message', 'Certificate has been edited!');
     }
-
+    //delete
     public function delete(Certificate $certificate)
     {
         $certificate->delete();
@@ -70,7 +71,7 @@ class CertificatesController extends Controller
             ->with('message', 'Certificate has been deleted!');
 
     }
-   
+   //image
     public function imageForm(Certificate $certificate)
     {
         return view('certificates.image', ['certificate' => $certificate]);

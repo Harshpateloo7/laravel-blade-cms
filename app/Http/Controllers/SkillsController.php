@@ -7,7 +7,7 @@ use App\Models\Skill;
 
 class SkillsController extends Controller
 {
-    
+    //list
     public function list()
     {
         return view('skills.list', [
@@ -36,6 +36,7 @@ class SkillsController extends Controller
         return redirect('/console/skills/list')
             ->with('message', 'Skill has been added!');
     }
+    //edit
     public function editForm(Skill $skill)
     {
         return view('skills.edit', [
@@ -59,7 +60,7 @@ class SkillsController extends Controller
         return redirect('/console/skills/list')
             ->with('message', 'Skill has been edited!');
     }
-
+    //delete
     public function delete(Skill $skill)
     {
         $skill->delete();
@@ -68,6 +69,7 @@ class SkillsController extends Controller
             ->with('message', 'Skill has been deleted!');
 
     }
+    //image
     public function imageForm(Skill $skill)
     {
         return view('skills.image', [

@@ -11,7 +11,7 @@ use App\Models\Topic;
 
 class EntriesController extends Controller
 {
-
+    //list
     public function list()
     {
         return view('entries.list', [
@@ -40,6 +40,7 @@ class EntriesController extends Controller
         $entry->content = $attributes['content'];
         $entry->learned_at = $attributes['learned_at'];
         $entry->save();
+        $entry->topics()->attach($attributes['topics']);
 
         return redirect('/console/entries/list')
             ->with('message', 'Entry has been added!');
@@ -71,6 +72,7 @@ class EntriesController extends Controller
         return redirect('/console/entries/list')
             ->with('message', 'Entry has been edited!');
     }
+    //delete
     public function delete(Entry $entry)
     {
         $entry->delete();

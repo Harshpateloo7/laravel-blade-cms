@@ -9,7 +9,7 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
-
+    //list
     public function list()
     {
 
@@ -18,7 +18,7 @@ class UsersController extends Controller
         ]);
 
     }
-
+    //add 
     public function addForm()
     {
 
@@ -47,7 +47,7 @@ class UsersController extends Controller
             ->with('message', 'User has been added!');
 
     }
-
+    //edit form
     public function editForm(User $user)
     {
 
@@ -83,7 +83,7 @@ class UsersController extends Controller
             ->with('message', 'User has been edited!');
 
     }
-
+    //delete
     public function delete(User $user)
     {
 

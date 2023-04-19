@@ -7,7 +7,7 @@ use App\Models\Qualification;
 
 class QualificationsController extends Controller
 {
-    //
+    //List
     public function list()
     {
         return view('qualifications.list', [
@@ -44,7 +44,7 @@ class QualificationsController extends Controller
          return redirect('/console/qualifications/list')
              ->with('message', 'Qualification has been added!');
      }
-
+     //Edit
      public function editForm(Qualification $qualification)
      {
          return view('qualifications.edit', [
@@ -75,7 +75,7 @@ class QualificationsController extends Controller
         return redirect('/console/qualifications/list')
             ->with('message', 'Qualification has been edited!');
     }
-
+    //delete
     public function delete(Qualification $qualification)
     {
         $qualification->delete();

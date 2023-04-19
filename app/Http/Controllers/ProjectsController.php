@@ -11,14 +11,14 @@ use App\Models\Type;
 
 class ProjectsController extends Controller
 {
-
+    //list
     public function list()
     {
         return view('projects.list', [
             'projects' => Project::all()
         ]);
     }
-
+    //add
     public function addForm()
     {
         return view('projects.add', [
@@ -49,7 +49,7 @@ class ProjectsController extends Controller
         return redirect('/console/projects/list')
             ->with('message', 'Project has been added!');
     }
-
+    //edit
     public function editForm(Project $project)
     {
         return view('projects.edit', [
@@ -83,7 +83,7 @@ class ProjectsController extends Controller
         return redirect('/console/projects/list')
             ->with('message', 'Project has been edited!');
     }
-
+    //delete
     public function delete(Project $project)
     {
 
@@ -97,7 +97,7 @@ class ProjectsController extends Controller
         return redirect('/console/projects/list')
             ->with('message', 'Project has been deleted!');        
     }
-
+    //image form
     public function imageForm(Project $project)
     {
         return view('projects.image', [

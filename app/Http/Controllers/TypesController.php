@@ -10,14 +10,14 @@ use App\Models\Type;
 
 class TypesController extends Controller
 {
-
+    //list
     public function list()
     {
         return view('types.list', [
             'types' => Type::all()
         ]);
     }
-
+    //add form
     public function addForm()
     {
 
@@ -38,7 +38,7 @@ class TypesController extends Controller
         return redirect('/console/types/list')
             ->with('message', 'Type has been added!');
     }
-
+    //edit form
     public function editForm(Type $type)
     {
         return view('types.edit', [
@@ -59,7 +59,7 @@ class TypesController extends Controller
         return redirect('/console/types/list')
             ->with('message', 'Type has been edited!');
     }
-
+    //delete
     public function delete(Type $type)
     {
         $type->delete();

@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 
 class TopicsController extends Controller
 {
+    //list
     public function list()
     {
         return view('topics.list', [
@@ -44,6 +45,7 @@ class TopicsController extends Controller
             'topic' => $topic,
         ]);
     }
+
     public function edit(Topic $topic)
     {
 
@@ -58,6 +60,7 @@ class TopicsController extends Controller
         return redirect('/console/topics/list')
             ->with('message', 'Topic has been edited!');
     }
+    //delete
     public function delete(Topic $topic)
     {
         $topic->delete();

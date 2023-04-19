@@ -1,7 +1,4 @@
 # Laravel CMS using Blade Views
-# Team
-- Harshadkumar Patel 
-- Beatrice Tan
 
 This repository is a copy of the simple [PHP/Laravel CMS](https://github.com/codeadamca/php-cms-laravel) except the CMS views have been converted from vanilla PHP to Blade.
 
@@ -16,7 +13,7 @@ $ cd <FOLDER_NAME>
 $ ls
 ```
 
-Note: On a Windows machine use ```dir``` to view the files in the current folder:
+Note: On a Wiindows machine use ```dir``` to view the files in the current folder:
 
 ```
 $ dir
@@ -30,8 +27,7 @@ $ git clone https://github.com/codeadamca/laravel-blade-cms.git
 
 3. Using the Terminal, use ```ls``` on a Mac ot ```dir``` on a Windows machine to view the files in the current directory:
 
-<img width="250" alt="screenshot-list" src="https://user-images.githubusercontent.com/64983530/232342253-c2b59913-cf5a-4053-b10c-8c1b7fd7aef4.png">
-
+![Listing Files](https://raw.githubusercontent.com/codeadamca/laravel-blade-cms/main/.readme/screenshot-list.png)
 
 You should now see a folder named ```laravel-blade-cms```. Change the present working directory to your new folder:
 
@@ -68,8 +64,7 @@ DB_SOCKET=/Applications/MAMP/tmp/mysql/mysql.sock
 
 Your socket setting may be different. When your MAMP server is up and running, open the MAMP start page (http://:8888/MAMP), go to the MySQL tab, and your socket location will be listed:
 
-<img width="300" alt="screenshot-mamp-socket" src="https://user-images.githubusercontent.com/64983530/232342315-f289f9fc-7b2a-4851-b6c4-d0a6c97216a8.png">
-
+![MAMP Socket](https://raw.githubusercontent.com/codeadamca/laravel-blade-cms/main/.readme/screenshot-mamp-socket.png)
 
 The database setup included with this applications includes migrations and seeding. Run the following command to create the required tables and seed them with testing data:
 
@@ -91,8 +86,7 @@ $ php artisan storage:link
 
 7. Opne up your MAMP preferences and set the document root to the ```public``` folder in your ```laravel-blade-cms``` folder:
 
-<img width="250" alt="screenshot-mamp" src="https://user-images.githubusercontent.com/64983530/232342325-796d085b-8ddc-4958-af61-e958cb2e8b19.png">
-
+![Root Folder](https://raw.githubusercontent.com/codeadamca/laravel-blade-cms/main/.readme/screenshot-mamp.png)
 
 Restart MAMP. 
 

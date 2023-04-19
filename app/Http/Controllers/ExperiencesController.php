@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ExperiencesController extends Controller
 {
-    //
+    //list
     public function list()
     {
         return view('experiences.list', [
