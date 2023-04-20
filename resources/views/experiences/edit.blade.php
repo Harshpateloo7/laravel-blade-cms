@@ -56,13 +56,37 @@
         <div class="w3-margin-bottom">
             <label for="end_date">End Date:</label>
             <input type="date" name="end_date" id="end_date"
-                value="{{old('end_date', \Carbon\Carbon::parse($experience->end_date)->format('Y-m-d'))}}" required>
+                value="{{old('end_date', \Carbon\Carbon::parse($experience->end_date)->format('Y-m-d'))}}"
+                @if($experience->present) disabled @endif>
 
             @if ($errors->first('end_date'))
             <br>
             <span class="w3-text-red">{{$errors->first('end_date')}}</span>
             @endif
         </div>
+
+        <div class="form-group">
+            <label for="present">Present:</label>
+            <input type="checkbox" id="present" name="present" @if($experience->present) checked @endif
+            onchange="updateEndDate()">
+
+            <script>
+            function updateEndDate() {
+                var endDateField = document.getElementById('end_date');
+                if (endDateField.disabled == false) {
+                    if (document.getElementById('present').checked) {
+                        endDateField.value = "";
+                        endDateField.disabled = true;
+                    } else {
+                        endDateField.disabled = false;
+                    }
+                }
+            }
+            </script>
+        </div>
+
+
+
         <div class="w3-margin-bottom">
             <label for="description">Description: </label>
             <input type="text" name="description" id="description"
@@ -92,5 +116,6 @@
 
 
 </section>
+
 
 @endsection

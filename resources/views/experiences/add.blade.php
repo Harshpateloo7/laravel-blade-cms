@@ -60,6 +60,11 @@
             @endif
         </div>
 
+        <div class="form-group">
+            <label for="present">Present:</label>
+            <input type="checkbox" id="present" name="present">
+        </div>
+
         <div class="w3-margin-bottom">
             <label for="description">Description: </label>
             <input type="text" name="description" id="description" value="{{old('description')}}" required>
