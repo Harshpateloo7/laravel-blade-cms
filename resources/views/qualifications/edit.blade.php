@@ -72,7 +72,7 @@
 
     </form>
 
-    <a href="/console/qualification/list">Back to Qualification List</a>
+    <a href="/console/qualifications/list">Back to Qualification List</a>
 
 </section>
 
